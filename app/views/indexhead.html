@@ -1,0 +1,115 @@
+<div>
+<header>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+		<div class="item active">
+		  <img src="images/imgn-slide1.jpg" alt="Chania"/>
+		  <div class="carousel-caption">
+			<h3>Game of Thrones</h3>
+			
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img src="images/imgn-slide2.jpg" alt="Chania"/>
+		  <div class="carousel-caption">
+			<h3>Sherlock</h3>
+			
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img src="images/imgn-slide3.jpg" alt="Flower"/>
+		  <div class="carousel-caption">
+			<h3>FRIENDS</h3>
+			
+		  </div>
+		</div>
+
+		<div class="item">
+		  <img src="images/imgn-slide4.jpg" alt="Flower"/>
+		  <div class="carousel-caption">
+			<h3>Breaking Bad</h3>
+			
+		  </div>
+		</div>
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	  </a>
+	</div>
+</header>
+<div class="container">
+	<h2>Top Shows</h2>
+	<div class="row" ng-if="!showShow">
+	<h3>{{message}}</h3>
+	</div>
+	<div class="row" ng-if="showShow">
+		<div class="col-md-3 text-center" ng-repeat="show in shows">
+			<a ui-sref="app.detail({id: show.id})">
+				<img class="img-reponsive thumbnail center-block" ng-src={{show.image}}/>
+			</a>
+			<h5>{{show.name}}</h5>
+		</div>
+		<!--<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show1.jpg"/>
+			</a>
+			<h5>Sherlock</h5>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show3.jpg"/>
+			</a>
+			<h5>FRIENDS</h5>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show4.jpg"/>
+			</a>
+			<h5>How I met your Mother</h5>
+		</div>
+	
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show5.jpg"/>
+			</a>
+			<h5>Breaking Bad</h5>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show6.jpg"/>
+			</a>
+			<h5>Band of Brothers</h5>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show7.jpg"/>
+			</a>
+			<h5>Big Bang Theory</h5>
+		</div>
+		<div class="col-md-3 text-center">
+			<a href="#">
+				<img class="img-reponsive thumbnail center-block" src="images/img-show8.jpg"/>
+			</a>
+			<h5>TVF Pitchers</h5>
+		</div>-->
+	</div>
+</div>
+</div>

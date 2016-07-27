@@ -1,0 +1,23 @@
+{
+  "name": "demo project",
+  "description": "simple demonstration of angularJs",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1"
+  }
+}

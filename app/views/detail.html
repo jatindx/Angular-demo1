@@ -1,0 +1,127 @@
+<header>
+	<div class="container-fluid">
+		<div class="row head-row" ng-style="{ 'background-image': 'url(' + show.bigimage + ')' }">
+				<img class="img-reponsive head-img" src="images/imgn-slide1.jpg"/>
+		</div>
+	</div>
+</header>
+
+<div class="container">
+	<h2>Show Details</h2>
+	<div class="row" ng-if="!showShow">
+	<h3>{{message}}</h3>
+	</div>
+	<div class="row" ng-if="showShow">
+		<div class="col-sm-9">
+			<!-- <div class="row">
+				<div class="col-sm-12">
+					<div class="media">
+					  <div class="media-left">
+						<a href="#">
+						  <img class="media-object" ng-src={{show.image}} >
+						</a>
+					  </div>
+					  <div class="media-body">
+						<h4 class="media-heading">{{show.name}}</h4>
+						{{show.description}}
+						<p><strong>IMDB Rating </strong>{{show.imdb}}</p>
+						<p><strong>Seasons </strong>{{show.seasons}}</p>
+					  </div>
+					</div>
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-md-3">
+					<a href="#">
+					  <img class="img-responsive center-block" ng-src={{show.image}} >
+					</a>
+				</div>
+				<div class="col-md-9">
+					<h4 class="media-heading">{{show.name}}</h4>
+					{{show.description}}
+					<p><strong>IMDB Rating </strong>{{show.imdb}}</p>
+					<p><strong>Seasons </strong>{{show.seasons}}</p>
+				</div>
+			</div>
+			<div class="row">
+				<h4>Comments</h4>
+				<div class="col-sm-12">
+					<!-- <div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/author1.jpg"/>
+						</div>
+						<div class="media-body">
+							<h5>{{comment.author}}</h5>
+							<p>{{comment.comment}}</p>
+							
+							
+						</div>
+					</div> -->
+					<blockquote ng-repeat="comment in show.comments">
+						<p>{{comment.rating}} Stars</p>
+						<p>{{comment.comment}}</p>
+						<footer>{{comment.author}}</footer>
+					</blockquote>
+				
+				</div>
+				<!--<div class="col-sm-12">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/author1.jpg"/>
+						</div>
+						<div class="media-body">
+							<h5>Author 1</h5>
+							<p>But in certain circumstances and owing to the claims of duty or the 
+							obligations of business it will frequently occur that pleasures have to be repudiated and
+							annoyances accepted.
+							</p>
+							
+						</div>
+					</div>
+				
+				</div>
+				<div class="col-sm-12">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/author1.jpg"/>
+						</div>
+						<div class="media-body">
+							<h5>Author 1</h5>
+							<p>But in certain circumstances and owing to the claims of duty or the 
+							obligations of business it will frequently occur that pleasures have to be repudiated and
+							annoyances accepted.
+							</p>
+							
+						</div>
+					</div>
+				
+				</div>
+				<div class="col-sm-12">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/author1.jpg"/>
+						</div>
+						<div class="media-body">
+							<h5>Author 1</h5>
+							<p>But in certain circumstances and owing to the claims of duty or the 
+							obligations of business it will frequently occur that pleasures have to be repudiated and
+							annoyances accepted.
+							</p>
+							
+						</div>
+					</div>
+				
+				</div>-->
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<h4 class="text-center">Similar Shows</h4>
+			<ul class="list-group text-center">
+				<li class="list-group-item" ng-repeat="rshow in shows | filter : notShow">
+					<a ui-sref="app.detail({id:rshow.id})">{{rshow.name}}</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
